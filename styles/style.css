@@ -1,0 +1,154 @@
+
+:root{
+    --cor-primaria: #2C3639;/*variavel background color*/
+    --cor-secundaria: #DCD7C9;
+    --cor-terciaria: #A27B5C;
+    --cor-hover: #3F4E4F;
+
+    --font-principal: 'Krona One', sans-serif;
+    --font-secundaria: 'Monteserrat', sans-serif;
+}
+*{    /*RESET CSS - removendo nosso boxmodel (ja vem por padrão)*/
+    border: 0;
+    margin: 0; /*remove a margem padros dos elementos da pagina*/
+    padding: 0; /*remove o preenchimento dos elementos da da página*/
+  }
+
+body {
+    /*height: 100vh; /*deixa o conteúdo da página utilziar 100% do espaço disponível*/
+    box-sizing: border-box; /*box-sizing define que os elementos filhos nao saem do elemento pai (boa pratica)*/
+    /*background-color: black; colocando uma cor de fundo na página*/
+    background: var(--cor-primaria);
+    /*color: #F6F6F6; /*colocando uma cor no texto dos elementos dentro do corpo da página*/
+    color: var(--cor-secundaria);
+
+}
+
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;/**/
+}
+
+.cabecalho__menu{
+   display: flex;
+   gap: 80px; /*cria um espaco entre os dois elemntos do menu*/
+
+}
+.cabecalho__menu__link{
+    text-decoration: none;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria );
+}
+
+.titulo-destaque {  /*utiliando uma classe para determinar uma cor apenas para o item/conjunto dentro da classe*/
+    color: var(--cor-terciaria);
+}
+
+.apresentacao{ /*classe para o conteudo principal*/
+    padding: 3%;
+    margin: 1% 15%;
+    display: flex; /*colocando os elementos em linha utilizando o FLEX*/
+    justify-content: space-between;
+    align-items: center; /*centralizando os elementos no centro da tela*/
+    gap: 82px;/*espaco entre os filhos dentro da section*/
+  
+}
+
+.apresentacao__conteudo{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
+  
+}
+
+.apresentacao__conteudo__titulo{
+    font-family: var(--font-principal);
+    font-weight: 400;
+    /*font-size: 36px;*/
+    font-size: 2.25rem;/*unidade de medida em rem para resposividade do tamanho do navegador*/
+
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    font-optical-sizing: auto;
+    font-weight: 400;
+  
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:32px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--font-principal);
+    font-weight: 400; 
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao{
+    justify-content: center;
+    gap: 16px;
+    display:flex;
+    /* background-color: #22d4fd; */
+    width: 50%; /*tamanho da borda do botao*/
+    text-align: center; /*alinha conteudo do botao*/
+    border: 2px solid var(--cor-terciaria);/*borda do botao + cor azul*/
+    border-radius: 8px;/*deixar borda aredondada*/
+    font-weight: 600;/*fonte do conteudo do botao*/
+    font-size: 1.5rem;/*tamanho da fonte do botao*/
+    padding: 21.5px 0; /*ajuste do tamanho link links */
+    text-decoration: none;/*remover sublinhado da ancora*/
+    color: var(--cor-secundaria);/*cor do conteudo dentro do botao*/
+    font-family: var(--font-secundaria);/*fonte do xonteudo dentro do botao*/
+}
+
+
+.apresentacao__links__link:hover{
+    background-color: var(--cor-hover); /*colocar um efeito ao passar o mouse na ancora*/
+}
+
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    text-align: center;
+    padding: 24px;/*espaço do conteudo ate a borda*/
+    color: var(--cor-primaria); /*cor do conteudo*/
+    background-color: var(--cor-terciaria); /*cor de fundo*/
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;}
+
+
+@media (max-width: 1200px)/*verificar a condicao determinada, por isso que se usa o () */{
+    
+    .cabecalho{
+        padding: 10% 0% 0% 0%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%
+
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+
+}
