@@ -99,7 +99,7 @@ body {
     gap: 16px;
     display:flex;
     /* background-color: #22d4fd; */
-    width: 50%; /*tamanho da borda do botao*/
+    width: 70%; /*tamanho da borda do botao*/
     text-align: center; /*alinha conteudo do botao*/
     border: 2px solid var(--cor-terciaria);/*borda do botao + cor azul*/
     border-radius: 8px;/*deixar borda aredondada*/
